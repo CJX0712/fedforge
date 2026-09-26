@@ -1,0 +1,139 @@
+{
+  "system": "FedForge",
+  "author": "晨星 (CJX0712)",
+  "seed": 42,
+  "rounds_to_target_acc": 0.9,
+  "env": {
+    "numpy": "2.5.3",
+    "sklearn": "1.9.1",
+    "flwr": "1.38.0"
+  },
+  "hpo": {
+    "best_params": {
+      "lr": 0.15930522616241014,
+      "local_epochs": 3,
+      "batch_size": 32,
+      "strategy": "fedavg"
+    },
+    "best_tail_acc": 0.9075
+  },
+  "final_run": {
+    "partition": "dirichlet",
+    "alpha": 0.1,
+    "final_acc": 0.913,
+    "worst_client_acc": 0.89,
+    "total_comm_mb": 0.0357
+  },
+  "benchmark_rows": [
+    {
+      "backend": "numpy",
+      "partition": "iid",
+      "alpha": 0.0,
+      "strategy": "fedavg",
+      "final_acc": 0.9185,
+      "worst_client_acc": 0.9,
+      "rounds_to_target": 1,
+      "total_comm_mb": 0.0357,
+      "note": ""
+    },
+    {
+      "backend": "numpy",
+      "partition": "iid",
+      "alpha": 0.0,
+      "strategy": "fedmedian",
+      "final_acc": 0.917,
+      "worst_client_acc": 0.9,
+      "rounds_to_target": 1,
+      "total_comm_mb": 0.0357,
+      "note": ""
+    },
+    {
+      "backend": "numpy",
+      "partition": "iid",
+      "alpha": 0.0,
+      "strategy": "trimmedmean",
+      "final_acc": 0.917,
+      "worst_client_acc": 0.9,
+      "rounds_to_target": 1,
+      "total_comm_mb": 0.0357,
+      "note": ""
+    },
+    {
+      "backend": "numpy",
+      "partition": "dirichlet",
+      "alpha": 0.5,
+      "strategy": "fedavg",
+      "final_acc": 0.9185,
+      "worst_client_acc": 0.89,
+      "rounds_to_target": 1,
+      "total_comm_mb": 0.0357,
+      "note": ""
+    },
+    {
+      "backend": "numpy",
+      "partition": "dirichlet",
+      "alpha": 0.5,
+      "strategy": "fedmedian",
+      "final_acc": 0.9135,
+      "worst_client_acc": 0.885,
+      "rounds_to_target": 2,
+      "total_comm_mb": 0.0357,
+      "note": ""
+    },
+    {
+      "backend": "numpy",
+      "partition": "dirichlet",
+      "alpha": 0.5,
+      "strategy": "trimmedmean",
+      "final_acc": 0.9135,
+      "worst_client_acc": 0.885,
+      "rounds_to_target": 2,
+      "total_comm_mb": 0.0357,
+      "note": ""
+    },
+    {
+      "backend": "numpy",
+      "partition": "dirichlet",
+      "alpha": 0.1,
+      "strategy": "fedavg",
+      "final_acc": 0.915,
+      "worst_client_acc": 0.895,
+      "rounds_to_target": 5,
+      "total_comm_mb": 0.0357,
+      "note": ""
+    },
+    {
+      "backend": "numpy",
+      "partition": "dirichlet",
+      "alpha": 0.1,
+      "strategy": "fedmedian",
+      "final_acc": 0.912,
+      "worst_client_acc": 0.895,
+      "rounds_to_target": 9,
+      "total_comm_mb": 0.0357,
+      "note": ""
+    },
+    {
+      "backend": "numpy",
+      "partition": "dirichlet",
+      "alpha": 0.1,
+      "strategy": "trimmedmean",
+      "final_acc": 0.912,
+      "worst_client_acc": 0.895,
+      "rounds_to_target": 9,
+      "total_comm_mb": 0.0357,
+      "note": ""
+    },
+    {
+      "backend": "flwr",
+      "partition": "dirichlet",
+      "alpha": 0.1,
+      "strategy": "fedavg",
+      "final_acc": 0.0,
+      "worst_client_acc": 0.0,
+      "rounds_to_target": -1,
+      "total_comm_mb": 0.0,
+      "note": "skipped: flwr/ray runtime unavailable"
+    }
+  ]
+}

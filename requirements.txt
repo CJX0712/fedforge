@@ -1,0 +1,7 @@
+numpy>=2.0
+scikit-learn>=1.5
+optuna>=4.0
+pytest>=8.0
+# Optional SOTA federated backend (skipped gracefully if unavailable)
+flwr>=1.38
+ray>=2.58; sys_platform == "win32" or sys_platform == "linux"
